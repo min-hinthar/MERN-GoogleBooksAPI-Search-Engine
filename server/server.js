@@ -3,8 +3,29 @@ const path = require('path');
 const db = require('./config/connection');
 const routes = require('./routes');
 
+// import Apollo Server and use as middleware
+const { ApolloServer } = require('apollo-server-express');
+const { typeDefs, resolvers } = require('./schemas');
+const { authMiddleware } = require('./utils/auth');
+
 const app = express();
 const PORT = process.env.PORT || 3001;
+
+// Use Apollo Server as middleware with typeDefs, Resolvers
+const startServer = async () => {
+  const server = new ApolloServer({
+    typeDefs,
+    resolvers,
+    context: authMiddleware,
+  });
+  await server.start();
+  server.applyMiddleware({ app });
+  console.log(`Server Started: GraphQL at http://localhost:${PORT}${server.graphqlPath}`);
+};
+
+// call startServer function
+startServer();
+
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
