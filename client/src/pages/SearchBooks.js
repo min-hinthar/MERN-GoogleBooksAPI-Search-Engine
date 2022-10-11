@@ -5,6 +5,11 @@ import Auth from '../utils/auth';
 import { saveBook, searchGoogleBooks } from '../utils/API';
 import { saveBookIds, getSavedBookIds } from '../utils/localStorage';
 
+// import useMutation from Apollo/react-hooks
+import { useMutation } from '@apollo/react-hooks';
+// import SAVE_BOOK from utils
+import { SAVE_BOOK } from '../utils/mutations';
+
 const SearchBooks = () => {
   // create state for holding returned google api data
   const [searchedBooks, setSearchedBooks] = useState([]);
@@ -19,6 +24,9 @@ const SearchBooks = () => {
   useEffect(() => {
     return () => saveBookIds(savedBookIds);
   });
+
+  // use SAVE_BOOK mutation by using saveBook 
+  const [ saveBook ] = useMutation(SAVE_BOOK)
 
   // create method to search for books and set state on form submit
   const handleFormSubmit = async (event) => {
