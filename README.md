@@ -101,7 +101,7 @@ MIT
 
 #### GitHub Username: min-hinthar 
 
-#### GitHub URL: github.com/min-hinthar
+#### GitHub URL: https://github.com/min-hinthar/MERN-GoogleBooksAPI-Search-Engine
 
 #### Email: min@hintharinc.com
 
