@@ -2,6 +2,10 @@
 ![License Badges](https://img.shields.io/badge/LICENSE-MIT-blue)
 -----
 
+![Getting Started](./client/public/images/Login.jpg)
+![Getting Started](./client/public/images/Search.jpg)
+![Getting Started](./client/public/images/Saved.jpg)
+
 ## Table of Contents
 1. [Description](#description)
 2. [Installation](#installation)
@@ -19,6 +23,9 @@ Set up an Apollo Server to use GraphQL queries and mutations to fetch and modify
 Modify the existing authentication middleware so that it works in the context of a GraphQL API.
 Create an Apollo Provider so that requests can communicate with an Apollo Server.
 Deploy the application to Heroku.
+
+TECH STACKS:
+GraphQL, Apollo Server, MERN Stack, React Front End, MongoDB Database, Node.js/Express and, API.
 
 -----
 
