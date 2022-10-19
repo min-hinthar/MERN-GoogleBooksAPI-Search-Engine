@@ -103,6 +103,8 @@ MIT
 
 #### GitHub URL: https://github.com/min-hinthar/MERN-GoogleBooksAPI-Search-Engine
 
+#### Heroku Deployment URL: https://mern-googlebooksapi.herokuapp.com/
+
 #### Email: min@hintharinc.com
 
 -----
