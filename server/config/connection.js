@@ -1,8 +1,6 @@
 const mongoose = require('mongoose');
-// // import .env for mongodb username password
-// require('dotenv').config({ path: '../.env' });
 
-mongoose.connect(process.env.MONGODB_URI || `mongodb://localhost:27017/googlebooks`, {
+mongoose.connect("mongodb+srv://admin:RPNtxpXOmseKJPwL@cluster0.0p0o2by.mongodb.net/googlebooks?retryWrites=true&w=majority", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
